@@ -1,0 +1,56 @@
+[
+  {
+    "name": "First National Bank",
+    "location": "New York",
+    "address": "123 Wall Street, New York, NY 10005",
+    "phone": 2125550101,
+    "accountNumber": 1234567890
+  },
+  {
+    "name": "City Savings Bank",
+    "location": "Los Angeles",
+    "address": "456 Sunset Blvd, Los Angeles, CA 90028",
+    "phone": 3105550202,
+    "accountNumber": 2345678901
+  },
+  {
+    "name": "Union Bank",
+    "location": "Chicago",
+    "address": "789 Lake Shore Dr, Chicago, IL 60611",
+    "phone": 3125550303,
+    "accountNumber": 3456789012
+  },
+  {
+    "name": "Metro Credit Union",
+    "location": "Houston",
+    "address": "101 Main St, Houston, TX 77002",
+    "phone": 7135550404,
+    "accountNumber": 4567890123
+  },
+  {
+    "name": "Capital One Bank",
+    "location": "San Francisco",
+    "address": "202 Market St, San Francisco, CA 94103",
+    "phone": 4155550505,
+    "accountNumber": 5678901234
+  },
+
+  {
+    "name": "John Doe",
+    "number": 1234567890,
+    "accountType": "Savings",
+    "bankId": "60d70baf8f4bf428202b1c42"
+  },
+  {
+    "name": "Jane Smith",
+    "number": 9876543210,
+    "accountType": "Checking",
+    "bankId": "60d70baf8f4bf428202b1c43"
+  },
+  {
+    "name": "Alice Johnson",
+    "number": 1122334455,
+    "accountType": "Business",
+    "bankId": "60d70baf8f4bf428202b1c44"
+  }
+]
