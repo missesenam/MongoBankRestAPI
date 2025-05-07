@@ -28,10 +28,10 @@ const ListAccounts = async (req, res) => {
   try {
     const FindAllAccounts = await AccountModel.find().populate(
       "bankId",
-      "name location phone -_id"
+      "name location phone "
     );
     if (FindAllAccounts.length === 0) {
-      res.status(404).json({ message: "No Accounts found" });
+      return res.status(404).json({ message: "No Accounts found" });
     }
     res.status(200).json({
       message: "Accounts retrieved successfully",

@@ -1,12 +1,24 @@
+const { validationResult } = require("express-validator");
 const BankModel = require("../model/BankModel");
+const AccountModel = require("../model/AccountModel");
 
 const CreateBank = async (req, res) => {
   try {
+    // validation checks
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      const errorMessages = errors.array().map((err) => ({ msg: err.msg }));
+      console.log(errors);
+      return res
+        .status(400)
+        .json({ message: "validation failed", errors: errors.array() });
+    }
     const { name, location, address, phone, accountNumber } = req.body;
 
-    if (!name || !location || !address || !phone || !accountNumber) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
+    // not needed anymore cause have validator
+    // if (!name || !location || !address || !phone || !accountNumber) {
+    //   return res.status(400).json({ message: "All fields are required" });
+    // }
     const NewCreatedBank = await BankModel.create({
       name,
       location,
@@ -99,9 +111,11 @@ const DeleteBank = async (req, res) => {
     if (!bankDeleted) {
       return res.status(404).json({ message: "Bank not found" });
     }
-    res
-      .status(200)
-      .json({ message: "Bank deleted successfully", bank: bankDeleted });
+    await AccountModel.deleteMany({ bankId: bankDeleted._id });
+    res.status(200).json({
+      message: "Bank  and related accounts deleted successfully",
+      bank: bankDeleted,
+    });
   } catch (error) {
     res
       .status(500)
