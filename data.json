@@ -52,5 +52,11 @@
     "number": 1122334455,
     "accountType": "Business",
     "bankId": "60d70baf8f4bf428202b1c44"
+  },
+
+  {
+    "username": "carol klerk",
+    "email": "carol@example.com",
+    "password": "mySecurePassword123"
   }
 ]

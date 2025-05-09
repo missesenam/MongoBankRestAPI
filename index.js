@@ -4,7 +4,9 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const MyBankRouter = require("./routes/BankRoutes");
 const MyAccountRouter = require("./routes/AccountRoutes");
+const userRouter = require("./routes/UserRoute");
 require("dotenv").config();
+
 const port = process.env.PORT || 5000;
 
 // server
@@ -16,6 +18,7 @@ server.use(bodyParser.json());
 // Router
 server.use("/api", MyBankRouter);
 server.use("/api", MyAccountRouter);
+server.use("/api", userRouter);
 
 // connection
 mongoose
