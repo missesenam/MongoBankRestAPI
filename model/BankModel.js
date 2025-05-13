@@ -34,6 +34,6 @@ const BankSchema = Schema({
   ],
 });
 
-const BankModel = mongoose.model("Thebank", BankSchema);
+const BankModel = mongoose.model("bank", BankSchema);
 
 module.exports = BankModel;
