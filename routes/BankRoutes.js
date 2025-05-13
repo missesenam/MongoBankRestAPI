@@ -30,7 +30,7 @@ const accnumAlreadyExists = (value, { req }) => {
 };
 
 MyBankRouter.post(
-  "/bank",
+  "/banks",
   isAuth,
   [
     body("name").trim().not().isEmpty().withMessage("name is required"),
@@ -63,7 +63,7 @@ MyBankRouter.post(
 );
 MyBankRouter.get("/banks", isAuth, ListBanks);
 MyBankRouter.get("/banks/:id", isAuth, ListBankById);
-MyBankRouter.put("/bank/:id", isAuth, UpdateBank);
-MyBankRouter.delete("/bank/:id", isAuth, DeleteBank);
+MyBankRouter.put("/banks/:id", isAuth, UpdateBank);
+MyBankRouter.delete("/banks/:id", isAuth, DeleteBank);
 
 module.exports = MyBankRouter;

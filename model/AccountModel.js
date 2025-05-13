@@ -17,7 +17,7 @@ const AccountSchema = Schema({
   },
   bankId: {
     type: Schema.Types.ObjectId,
-    ref: "Thebank",
+    ref: "bank",
     required: true,
   },
 });

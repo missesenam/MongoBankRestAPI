@@ -9,10 +9,10 @@ const {
 
 const MyAccountRouter = express.Router();
 
-MyAccountRouter.post("/account", CreateAccount);
+MyAccountRouter.post("/accounts", CreateAccount);
 MyAccountRouter.get("/accounts", ListAccounts);
 MyAccountRouter.get("/accounts/:id", ListAccountById);
-MyAccountRouter.put("/account/:id", UpdateAccount);
-MyAccountRouter.delete("/account/:id", DeleteAccount);
+MyAccountRouter.put("/accounts/:id", UpdateAccount);
+MyAccountRouter.delete("/accounts/:id", DeleteAccount);
 
 module.exports = MyAccountRouter;
